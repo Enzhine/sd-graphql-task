@@ -1,0 +1,13 @@
+type TaskRecord {
+    id: ID!
+    title: String!
+    description: String
+}
+
+type Query {
+    findAll(count: Int!, offset: Int!): [TaskRecord]!
+}
+
+type Mutation {
+    createTask(title: String!, description: String) : TaskRecord!
+}
